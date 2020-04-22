@@ -32,6 +32,6 @@ Al hacer clic sobre la tarjeta de un personaje, su información aparecerá a pan
 
 React
 
-###Autora
+### Autora
 
 - Belén Catalán
