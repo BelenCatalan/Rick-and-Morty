@@ -5,7 +5,7 @@ function Filters() {
     <section>
       <form>
         <label className="" htmlFor="name"></label>
-        <input className="" type="text" name="character" id="name" placeholder="Character name" />
+        <input className="" type="text" name="character" id="name" placeholder="Character name" /*onChange={handleInputCharacter} */ />
       </form>
     </section>
   );

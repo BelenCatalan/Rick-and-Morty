@@ -1,14 +1,15 @@
 import React from 'react';
-import '../stylesheets/App.css';
 
-function CharacterCard() {
+const CharacterCard = (props) => {
+  console.log(props.character.id);
+
   return (
     <li>
-      <img className="" src="" alt="character_name" />
-      <h4>Rick Sanchez</h4>
-      <p>Human</p>
+      <img className="" src={props.character.image} alt="character_name" />
+      <h4>{props.character.name}</h4>
+      <p>{props.character.species}</p>
     </li>
   );
-}
+};
 
 export default CharacterCard;
