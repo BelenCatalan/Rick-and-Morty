@@ -53,6 +53,8 @@ function App() {
     console.log(foundCharacter);
     if (foundCharacter !== undefined) {
       return <CharacterDetails character={foundCharacter} /*name={foundCharacter.id}*/ />;
+    } else {
+      return <p>El personaje que buscas no existe</p>;
     }
   };
 
