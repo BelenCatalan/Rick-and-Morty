@@ -14,10 +14,10 @@ function Filters(props) {
     e.preventDefault();
   };
   return (
-    <section>
-      <form onSubmit={handlerSubmit}>
-        <label className="" htmlFor="name"></label>
-        <input className="" type="text" name="character" id="name" placeholder="Character name" onChange={handleInputCharacter} value={props.charactersFilter} />
+    <section className="input__style">
+      <form onSubmit={handlerSubmit} className="input__style">
+        <label className="input__style" htmlFor="name"></label>
+        <input className="input__label" type="text" name="character" id="name" placeholder="Character name" onChange={handleInputCharacter} value={props.charactersFilter} />
       </form>
     </section>
   );

@@ -56,14 +56,14 @@ function App() {
     if (foundCharacter !== undefined) {
       return <CharacterDetails character={foundCharacter} /*name={foundCharacter.id}*/ />;
     } else {
-      return <p>El personaje que buscas no existe</p>;
+      return <p className="text__advise">El personaje que buscas no existe</p>;
     }
   };
 
   return (
     <div>
       <header>
-        <img className="" src={logo} alt="Rick and Morty" />
+        <img className="header__name" src={logo} alt="Rick and Morty" />
       </header>
 
       <Switch>

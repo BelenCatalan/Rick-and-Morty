@@ -1,42 +1,136 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Detail and card */
+* {
+  margin: 0;
+  padding: 0;
 }
 
 .ship__link {
-  width: 100px;
+  width: 70px;
+  display: block;
+  margin-left: 600px;
+}
+.card__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card__div {
+  width: 620px;
+  height: 300px;
+  padding: 20px;
+  background-color: rgb(11, 192, 216);
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+}
+
+.card__title {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.card__text {
+  color: white;
+  font-size: 16px;
+}
+
+.header__name {
+  width: 500px;
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.detail__ul li {
+  list-style: none;
+  padding-bottom: 2px;
+  margin-left: 15px;
+}
+@media all and (max-width: 768px) {
+  .card__div {
+    width: 80vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .header__name {
+    width: 60%;
+  }
+  .ship__link {
+    margin-left: 220px;
+    width: 50px;
+  }
+  .card__text {
+    font-size: 13px;
+  }
+  .card__title {
+    font-size: 17px;
+    text-align: left;
+  }
+  .detail__image {
+    width: 100%;
+  }
+  .detail__ul li {
+    text-align: center;
+    padding: 0px;
+    margin-top: 10px;
+  }
+}
+
+/* grid */
+
+.wrapper {
+  display: grid;
+  grid-row-gap: 1ch;
+  grid-template: repeat(5, 300px) / repeat(4, 250px);
+  grid-auto-flow: row;
+  /* grid-auto-rows: minmax(100px, auto); */
+}
+
+.section__grid {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  justify-items: center;
+  margin-top: 40px;
+}
+.link__decoration {
+  text-decoration: none;
+}
+.card__text--color {
+  color: white;
+  margin-left: 6px;
+  margin-top: 5px;
+}
+.card__ul {
+  list-style: none;
+}
+.card__image {
+  width: 18vw;
+}
+.card__container {
+  width: 18vw;
+  background-color: rgb(11, 192, 216);
+}
+.input__style {
+  text-align: center;
+  margin-top: 40px;
+}
+.input__label {
+  width: 30vw;
+  height: 5vh;
+  border: solid 2px rgb(11, 192, 216);
+  background: transparent;
+  color: white;
+  font-size: 13px;
+}
+.text__advise {
+  color: white;
+  font-size: 25px;
+  text-align: center;
+  margin-top: 40px;
 }

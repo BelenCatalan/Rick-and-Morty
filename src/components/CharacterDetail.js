@@ -5,19 +5,20 @@ import PropTypes from 'prop-types';
 
 function CharacterDetail(props) {
   return (
-    <div className="">
+    <div className="card__content">
       <div>
-        <div className="content">
-          <Link to="/">
-            <img className="ship__link" src={nave} alt="nave Rick and Morty" />
-          </Link>
+        <span className="card__text"> </span>
+        <Link to="/">
+          <img className="ship__link" src={nave} alt="nave Rick and Morty" />
+        </Link>
+        <div className="content card__div">
           <header>
-            <img className="" src={props.character.image} alt="character_name" />
+            <img className="detail__image" src={props.character.image} alt="character_name" />
           </header>
           <section>
-            <ul>
-              <li>{props.character.name}</li>
-              <li>Status: {props.character.status}</li>
+            <ul className="detail__ul card__text">
+              <li className="card__title">{props.character.name}</li>
+              <li className="card__text">Status: {props.character.status}</li>
               <li>Species:{props.character.species}</li>
               <li>Origin: {props.character.origin}</li>
               <li>Episodes:{props.character.episodes}</li>
