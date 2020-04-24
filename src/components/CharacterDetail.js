@@ -1,4 +1,6 @@
 import React from 'react';
+import nave from '../images/nave.png';
+import { Link } from 'react-router-dom';
 
 function CharacterDetail(props) {
   console.log(props);
@@ -6,6 +8,9 @@ function CharacterDetail(props) {
     <div className="">
       <div>
         <div className="content">
+          <Link to="/">
+            <img className="ship__link" src={nave} alt="nave Rick and Morty" />
+          </Link>
           <header>
             <img className="" src={props.character.image} alt="character_name" />
           </header>

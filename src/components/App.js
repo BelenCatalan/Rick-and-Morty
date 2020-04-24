@@ -18,11 +18,8 @@ function App() {
   }, []);
 
   const handleFilterText = (data) => {
-    console.log(data);
-    console.log('estoy');
     setCharactersFilter(data.value);
   };
-  console.log(characters);
 
   characters.sort(function (a, b) {
     if (a.name < b.name) return -1;
@@ -64,10 +61,13 @@ function App() {
       <header>
         <img className="" src={logo} alt="Rick and Morty" />
       </header>
-      <Filters handleFilterText={handleFilterText} charactersFilter={charactersFilter} />
-      {/* {renderFilterCharacters()} */}
-      <CharacterList characters={filteredCharacters} charactersFilter={charactersFilter} />
+
       <Switch>
+        {/* <Route path="/" render={() => <Filters handleFilterText={handleFilterText} charactersFilter={charactersFilter} />} /> */}
+        <Route exact path="/">
+          <Filters handleFilterText={handleFilterText} charactersFilter={charactersFilter} />
+          <CharacterList characters={filteredCharacters} charactersFilter={charactersFilter} />
+        </Route>
         <Route path="/character/:characterId" render={renderCharacterDetails} />
         {/* <CharacterDetails /> */}
       </Switch>
