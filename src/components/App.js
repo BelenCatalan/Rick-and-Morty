@@ -5,6 +5,7 @@ import CharacterList from './CharacterList';
 import Filters from './Filters';
 import CharacterDetails from './CharacterDetail';
 import getDataApi from '../services/getDataApi';
+import { Route, Switch } from 'react-router-dom';
 
 function App() {
   const [characters, setCharacters] = useState([]);
@@ -45,6 +46,19 @@ function App() {
   // };
 
   // console.log(filteredCharacters);
+  const renderCharacterDetails = (props) => {
+    console.log(props.match.params.characterId);
+    const characterId = parseInt(props.match.params.characterId);
+    console.log(characterId);
+    const foundCharacter = characters.find((character) => {
+      return character.id === characterId;
+    });
+    console.log(foundCharacter);
+    if (foundCharacter !== undefined) {
+      return <CharacterDetails character={foundCharacter} /*name={foundCharacter.id}*/ />;
+    }
+  };
+
   return (
     <div>
       <header>
@@ -53,7 +67,10 @@ function App() {
       <Filters handleFilterText={handleFilterText} charactersFilter={charactersFilter} />
       {/* {renderFilterCharacters()} */}
       <CharacterList characters={filteredCharacters} charactersFilter={charactersFilter} />
-      <CharacterDetails />
+      <Switch>
+        <Route path="/character/:characterId" render={renderCharacterDetails} />
+        {/* <CharacterDetails /> */}
+      </Switch>
     </div>
   );
 }
