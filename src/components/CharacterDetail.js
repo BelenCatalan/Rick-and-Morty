@@ -1,9 +1,9 @@
 import React from 'react';
 import nave from '../images/nave.png';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 function CharacterDetail(props) {
-  console.log(props);
   return (
     <div className="">
       <div>
@@ -28,5 +28,8 @@ function CharacterDetail(props) {
     </div>
   );
 }
+CharacterDetail.propTypes = {
+  character: PropTypes.object.isRequired,
+};
 
 export default CharacterDetail;

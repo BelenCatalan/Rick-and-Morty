@@ -1,7 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function Filters(props) {
-  console.log(props);
   const handleInputCharacter = (ev) => {
     ev.preventDefault();
     console.log(ev.target.value);
@@ -22,5 +22,10 @@ function Filters(props) {
     </section>
   );
 }
+
+Filters.propTypes = {
+  charactersFilter: PropTypes.string.isRequired,
+  handleFilterText: PropTypes.func.isRequired,
+};
 
 export default Filters;

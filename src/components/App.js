@@ -6,6 +6,7 @@ import Filters from './Filters';
 import CharacterDetails from './CharacterDetail';
 import getDataApi from '../services/getDataApi';
 import { Route, Switch } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 function App() {
   const [characters, setCharacters] = useState([]);
@@ -44,6 +45,7 @@ function App() {
 
   // console.log(filteredCharacters);
   const renderCharacterDetails = (props) => {
+    console.log(props);
     console.log(props.match.params.characterId);
     const characterId = parseInt(props.match.params.characterId);
     console.log(characterId);
@@ -76,5 +78,13 @@ function App() {
     </div>
   );
 }
+
+App.propTypes = {
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      characterId: PropTypes.string.isRequired,
+    }),
+  }),
+};
 
 export default App;

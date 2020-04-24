@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const CharacterCard = (props) => {
-  console.log(props);
   return (
     <li>
       <Link to={`/character/${props.character.id}`}>
@@ -12,6 +12,18 @@ const CharacterCard = (props) => {
       </Link>
     </li>
   );
+};
+
+CharacterCard.propTypes = {
+  character: PropTypes.shape({
+    id: PropTypes.number,
+    name: PropTypes.string,
+    status: PropTypes.string,
+    species: PropTypes.string,
+    origin: PropTypes.string,
+    image: PropTypes.string,
+    episodes: PropTypes.number,
+  }),
 };
 
 export default CharacterCard;
