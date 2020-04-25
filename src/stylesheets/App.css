@@ -60,7 +60,7 @@
     width: 60%;
   }
   .ship__link {
-    margin-left: 220px;
+    margin-left: 230px;
     width: 50px;
   }
   .card__text {
@@ -116,6 +116,48 @@
   width: 18vw;
   background-color: rgb(11, 192, 216);
 }
+
+@media all and (max-width: 1200px) and (min-width: 320px) {
+  .wrapper {
+    grid-row-gap: 1ch;
+    grid-template: repeat(7, 310px) / repeat(3, 250px);
+
+    /* grid-auto-rows: minmax(100px, auto); */
+  }
+  .card__image {
+    width: 23vw;
+  }
+  .card__container {
+    width: 23vw;
+  }
+  .card__text--color {
+    font-size: 15px;
+    margin-top: 1px;
+    margin-left: 4px;
+  }
+}
+@media all and (max-width: 320px) {
+  .wrapper {
+    grid-row-gap: 1ch;
+    grid-template: repeat(10, 150px) / repeat(2, 100px);
+
+    /* grid-auto-rows: minmax(100px, auto); */
+  }
+  .card__image {
+    width: 30vw;
+  }
+  .card__container {
+    width: 30vw;
+  }
+  .card__text--color {
+    font-size: 11px;
+    margin-top: 1px;
+    margin-left: 4px;
+  }
+}
+
+/* Form style */
+
 .input__style {
   text-align: center;
   margin-top: 40px;
@@ -133,4 +175,12 @@
   font-size: 25px;
   text-align: center;
   margin-top: 40px;
+}
+@media all and (max-width: 768px) {
+  .input__style {
+    margin-top: 20px;
+  }
+  .input__label {
+    font-size: 11px;
+  }
 }

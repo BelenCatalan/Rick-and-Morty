@@ -13,7 +13,7 @@ function CharacterDetail(props) {
         </Link>
         <div className="content card__div">
           <header>
-            <img className="detail__image" src={props.character.image} alt="character_name" />
+            <img className="detail__image" src={props.character.image} alt={props.character.name} />
           </header>
           <section>
             <ul className="detail__ul card__text">
