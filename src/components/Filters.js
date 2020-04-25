@@ -3,16 +3,13 @@ import PropTypes from 'prop-types';
 
 function Filters(props) {
   const handleInputCharacter = (ev) => {
-    ev.preventDefault();
-    console.log(ev.target.value);
     props.handleFilterText({
       value: ev.target.value,
       name: ev.target.name,
     });
   };
-  const handlerSubmit = (e) => {
-    e.preventDefault();
-  };
+  const handlerSubmit = (e) => e.preventDefault();
+
   return (
     <section className="input__style">
       <form onSubmit={handlerSubmit} className="input__style">

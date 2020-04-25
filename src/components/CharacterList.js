@@ -7,7 +7,7 @@ function CharacterList(props) {
   if (props.characters.length === 0) {
     return (
       <div>
-        <p className="text__advise">No hay ningún personaje que coincida con: {props.charactersFilter}</p>
+        <p className="text__advise">There isn't any character that matches with: {props.charactersFilter}</p>
         <img className="header__name" src={dos} alt="Rick and Morty" />
       </div>
     );

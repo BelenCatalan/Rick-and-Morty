@@ -16,3 +16,5 @@ const getDataApi = () => {
     });
 };
 export default getDataApi;
+
+// en caso de que no la API no esté habilitada o no funcione obtener los datos de aqui:https://raw.githubusercontent.com/Adalab/rick-y-morty/master/data/rick-y-morty.json

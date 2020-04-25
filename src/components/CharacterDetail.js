@@ -9,13 +9,13 @@ function CharacterDetail(props) {
       case 'Alien':
         return (
           <li>
-            Species: <i class="fab fa-reddit-alien"></i>
+            Species: <i className="fab fa-reddit-alien"></i>
           </li>
         );
       case 'Human':
         return (
           <li>
-            Species: <i class="fas fa-user-alt"></i>
+            Species: <i className="fas fa-user-alt"></i>
           </li>
         );
       default:

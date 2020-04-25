@@ -19,9 +19,7 @@ function App() {
     });
   }, []);
 
-  const handleFilterText = (data) => {
-    setCharactersFilter(data.value);
-  };
+  const handleFilterText = (data) => setCharactersFilter(data.value);
 
   characters.sort(function (a, b) {
     if (a.name < b.name) return -1;
@@ -34,10 +32,7 @@ function App() {
   });
 
   const renderCharacterDetails = (props) => {
-    console.log(props);
-    console.log(props.match.params.characterId);
     const characterId = parseInt(props.match.params.characterId);
-    console.log(characterId);
     const foundCharacter = characters.find((character) => {
       return character.id === characterId;
     });
@@ -47,7 +42,7 @@ function App() {
     } else {
       return (
         <div>
-          <p className="text__advise">El personaje que buscas no existe</p>
+          <p className="text__advise">The character you are looking for doesn't exist</p>
           <img className="header__name" src={dos} alt="Rick and Morty" />
         </div>
       );
