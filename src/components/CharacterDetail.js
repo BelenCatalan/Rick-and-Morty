@@ -4,6 +4,25 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 function CharacterDetail(props) {
+  function renderSpecies() {
+    switch (props.character.species) {
+      case 'Alien':
+        return (
+          <li>
+            Species: <i class="fab fa-reddit-alien"></i>
+          </li>
+        );
+      case 'Human':
+        return (
+          <li>
+            Species: <i class="fas fa-user-alt"></i>
+          </li>
+        );
+      default:
+        return null;
+    }
+  }
+
   return (
     <div className="card__content">
       <div>
@@ -18,8 +37,8 @@ function CharacterDetail(props) {
           <section>
             <ul className="detail__ul card__text">
               <li className="card__title">{props.character.name}</li>
-              <li className="card__text">Status: {props.character.status}</li>
-              <li>Species:{props.character.species}</li>
+              <li className="card__text">Status: {props.character.status === 'Dead' ? <i className="fa fa-skull"></i> : props.character.status}</li>
+              {renderSpecies()}
               <li>Origin: {props.character.origin}</li>
               <li>Episodes:{props.character.episodes}</li>
             </ul>

@@ -4,6 +4,15 @@
   padding: 0;
 }
 
+/* WEB HEADER */
+.header__name {
+  width: 500px;
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+}
+
+/* CARD DETAILS */
 .ship__link {
   width: 70px;
   display: block;
@@ -35,13 +44,6 @@
 .card__text {
   color: white;
   font-size: 16px;
-}
-
-.header__name {
-  width: 500px;
-  display: block;
-  margin: auto;
-  margin-top: 20px;
 }
 
 .detail__ul li {
@@ -80,14 +82,13 @@
   }
 }
 
-/* grid */
+/* CARD LIST grid */
 
 .wrapper {
   display: grid;
   grid-row-gap: 1ch;
   grid-template: repeat(5, 300px) / repeat(4, 250px);
   grid-auto-flow: row;
-  /* grid-auto-rows: minmax(100px, auto); */
 }
 
 .section__grid {
@@ -140,8 +141,6 @@
   .wrapper {
     grid-row-gap: 1ch;
     grid-template: repeat(10, 150px) / repeat(2, 100px);
-
-    /* grid-auto-rows: minmax(100px, auto); */
   }
   .card__image {
     width: 30vw;
@@ -156,7 +155,7 @@
   }
 }
 
-/* Form style */
+/* FORM STYLE */
 
 .input__style {
   text-align: center;
